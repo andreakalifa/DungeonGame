@@ -83,6 +83,12 @@ def game_loop():
             break
         if move in valid_moves:
             player = move_player(player, move)
+            if player == monster:
+                print("Oh DAMN , THE MONSTER!")
+                break
+            if player == door:
+                print("GREAT, YOU FIND THE EXIT DOOR!")
+                break
         else:
             input("\n ** Walls are hard! Don't run into them! **\n")
         clear_screen()
